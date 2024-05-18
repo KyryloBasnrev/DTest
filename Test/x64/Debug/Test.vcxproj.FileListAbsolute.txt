@@ -1,0 +1,6 @@
+D:\C++_Proj\Test\Test\x64\Debug\Test.vcxproj.AssemblyReference.cache
+D:\C++_Proj\Test\Test\x64\Debug\Test.StartForm.resources
+D:\C++_Proj\Test\Test\x64\Debug\Test.vcxproj.GenerateResource.cache
+D:\C++_Proj\Test\Test\x64\Debug\Test.RegisterForm.resources
+D:\C++_Proj\Test\Test\x64\Debug\Test.StudentForm.resources
+D:\C++_Proj\Test\Test\x64\Debug\Test.TitherForm.resources
