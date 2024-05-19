@@ -7,7 +7,7 @@
 #include "StudentForm.h"
 #include "TitherForm.h"
 #include "CreateTestForm.h"
-#include "CreateTest2Form.h"
+
 
 using namespace System;
 using namespace System::ComponentModel;
@@ -28,10 +28,6 @@ int main(array<String^>^ args) {
 	Test::StudentForm studentform;
 	Test::TitherForm titherform;
 	Test::CreateTestForm createtestform;
-	Test::CreateTest2Form createtest2form;
-
-	createtest2form.adres = createtestform.AdresTest;
-	createtest2form.name = createtestform.NameTest;
 
 	while (true) {
 		startform.ShowDialog();
@@ -48,10 +44,6 @@ int main(array<String^>^ args) {
 				titherform.ShowDialog();
 				if (titherform.toCreateTest) {
 					createtestform.ShowDialog();
-					if (createtestform.toCreateTest2) {
-						createtest2form.ShowDialog();
-						break;
-					}
 					break;
 				}
 				break;

@@ -5,4 +5,3 @@ D:\C++_Proj\Test\Test\x64\Debug\Test.RegisterForm.resources
 D:\C++_Proj\Test\Test\x64\Debug\Test.StudentForm.resources
 D:\C++_Proj\Test\Test\x64\Debug\Test.TitherForm.resources
 D:\C++_Proj\Test\Test\x64\Debug\Test.CreateTestForm.resources
-D:\C++_Proj\Test\Test\x64\Debug\Test.CreateTest2Form.resources

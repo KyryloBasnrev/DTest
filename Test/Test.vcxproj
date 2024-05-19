@@ -126,9 +126,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CreateTest2Form.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="CreateTestClass.h" />
     <ClInclude Include="CreateTestForm.h">
       <FileType>CppForm</FileType>
@@ -149,9 +146,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CreateTest2Form.resx">
-      <DependentUpon>CreateTest2Form.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CreateTestForm.resx">
       <DependentUpon>CreateTestForm.h</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,3 @@
-  Test.CreateTest2Form.resources - Embedded, ContainedInManifestFile, 
   Test.CreateTestForm.resources - Embedded, ContainedInManifestFile, 
   Test.RegisterForm.resources - Embedded, ContainedInManifestFile, 
   Test.StartForm.resources - Embedded, ContainedInManifestFile, 
@@ -41,12 +40,4 @@ Class Test.CreateTestForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    Boolean toCreateTest2 : Public
-    System.String NameTest : Public
-    System.String AdresTest : Public
-Class Test.CreateTest2Form: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    System.String name : Public
-    System.String adres : Public
+    Int32 qnum : Public
