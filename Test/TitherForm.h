@@ -34,6 +34,8 @@ namespace Test {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Button^ button1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,16 +50,28 @@ namespace Test {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(13, 13);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(148, 32);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"Створити тест";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &TitherForm::button1_Click);
 			// 
 			// TitherForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(10, 21);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(472, 304);
+			this->Controls->Add(this->button1);
 			this->Font = (gcnew System::Drawing::Font(L"Times New Roman", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->Margin = System::Windows::Forms::Padding(5);
 			this->Name = L"TitherForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"TitherForm";
@@ -65,5 +79,10 @@ namespace Test {
 
 		}
 #pragma endregion
+	public: bool toCreateTest = false;
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->toCreateTest = true;
+		this->Close();
+	}
 	};
 }
