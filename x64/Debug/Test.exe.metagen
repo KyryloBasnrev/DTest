@@ -31,6 +31,8 @@ Class Test.RegisterForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class Test.StudentForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 score : Public
 Class Test.TitherForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

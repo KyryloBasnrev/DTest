@@ -206,6 +206,9 @@ namespace Test {
 		this->textBoxA->Text = "";
 		this->textBoxQ->Text = "";
 
+		this->textBoxName->ReadOnly = true;
+		this->textBoxAdres->ReadOnly = true;
+
 	}
 	private: System::Void buttonEnd_Click(System::Object^ sender, System::EventArgs^ e) {
 		if ((this->textBoxName->Text != "") && (this->textBoxAdres->Text != "") && (this->textBoxQ->Text != "") && (this->textBoxA->Text != "")) {

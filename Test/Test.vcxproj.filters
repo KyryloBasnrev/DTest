@@ -44,5 +44,8 @@
     <ClInclude Include="CreateTestClass.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="StudentClass.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

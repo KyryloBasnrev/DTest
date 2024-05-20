@@ -138,6 +138,7 @@
     <ClInclude Include="StartForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="StudentClass.h" />
     <ClInclude Include="StudentForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
