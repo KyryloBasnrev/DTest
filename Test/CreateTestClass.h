@@ -85,4 +85,80 @@ class CreateTest {
 
 		}
 
+		String^ TestQ(String^ adres, String^ nametest, String^ numberofq) {
+			String^ connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\C++_Proj\\Test\\Test\\TestBase.accdb;";
+			OleDbConnection^ connection = gcnew OleDbConnection(connectionString);
+
+			try
+			{
+				// Открытие соединения
+				connection->Open();
+
+				// Выполнение запроса
+				String^ query = "SELECT question FROM Tests WHERE adres = ? AND nametest = ? AND numberofq = ?";
+				OleDbCommand^ command = gcnew OleDbCommand(query, connection);
+				command->Parameters->Add(gcnew OleDbParameter("@adres", adres));
+				command->Parameters->Add(gcnew OleDbParameter("@nametest", nametest));
+				command->Parameters->Add(gcnew OleDbParameter("@numberofq", numberofq));
+				OleDbDataReader^ reader = command->ExecuteReader();
+				String^ data = "";
+				while (reader->Read())
+				{
+					String^ data = "";
+					for (int i = 0; i < reader->FieldCount; i++)
+					{
+						data += reader->GetValue(i)->ToString() + " ";
+					}
+					return data;
+				}
+
+				// Закрытие соединения и отображение формы
+				reader->Close();
+				connection->Close();
+
+			}
+			catch (Exception^ ex)
+			{
+				MessageBox::Show("Error: " + ex->Message);
+			}
+		}
+
+		String^ TestA(String^ adres, String^ nametest, String^ numberofq) {
+			String^ connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\C++_Proj\\Test\\Test\\TestBase.accdb;";
+			OleDbConnection^ connection = gcnew OleDbConnection(connectionString);
+
+			try
+			{
+				// Открытие соединения
+				connection->Open();
+
+				// Выполнение запроса
+				String^ query = "SELECT answer FROM Tests WHERE adres = ? AND nametest = ? AND numberofq = ?";
+				OleDbCommand^ command = gcnew OleDbCommand(query, connection);
+				command->Parameters->Add(gcnew OleDbParameter("@adres", adres));
+				command->Parameters->Add(gcnew OleDbParameter("@nametest", nametest));
+				command->Parameters->Add(gcnew OleDbParameter("@numberofq", numberofq));
+				OleDbDataReader^ reader = command->ExecuteReader();
+				String^ data = "";
+				while (reader->Read())
+				{
+					String^ data = "";
+					for (int i = 0; i < reader->FieldCount; i++)
+					{
+						data += reader->GetValue(i)->ToString() + " ";
+					}
+					return data;
+				}
+
+				// Закрытие соединения и отображение формы
+				reader->Close();
+				connection->Close();
+
+			}
+			catch (Exception^ ex)
+			{
+				MessageBox::Show("Error: " + ex->Message);
+			}
+		}
+
 };

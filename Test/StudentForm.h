@@ -241,6 +241,9 @@ namespace Test {
 
 		String^ au = this->textBoxA->Text;
 
+		MessageBox::Show(a);
+		MessageBox::Show(au);
+
 		int r = s.Check(a, au);
 
 		if (r == 1) {

@@ -51,6 +51,7 @@ namespace Test {
 
 
 	private: System::Windows::Forms::Button^ buttonEnd;
+	private: System::Windows::Forms::Button^ button1;
 
 
 	private:
@@ -76,6 +77,7 @@ namespace Test {
 			this->textBoxQ = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxA = (gcnew System::Windows::Forms::TextBox());
 			this->buttonEnd = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -162,11 +164,22 @@ namespace Test {
 			this->buttonEnd->UseVisualStyleBackColor = true;
 			this->buttonEnd->Click += gcnew System::EventHandler(this, &CreateTestForm::buttonEnd_Click);
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(378, 279);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(171, 35);
+			this->button1->TabIndex = 10;
+			this->button1->Text = L"Переглянути тест";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &CreateTestForm::button1_Click);
+			// 
 			// CreateTestForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(10, 21);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(980, 338);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->buttonEnd);
 			this->Controls->Add(this->textBoxA);
 			this->Controls->Add(this->textBoxQ);
@@ -231,6 +244,34 @@ namespace Test {
 		else {
 			MessageBox::Show("Тест створено");
 		}
+	}
+
+	public: int numq = 0;
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->textBoxName->ReadOnly = true;
+		this->textBoxAdres->ReadOnly = true;
+		this->textBoxA->ReadOnly = true;
+		this->textBoxQ->ReadOnly = true;
+		
+		String^ adres = this->textBoxAdres->Text;
+		String^ name = this->textBoxName->Text;
+
+		CreateTest ct;
+
+		this->textBoxQ->Text = ct.TestQ(adres, name, Convert::ToString(numq + 1));
+		this->textBoxA->Text = ct.TestA(adres, name, Convert::ToString(numq + 1));
+
+		if (this->textBoxQ->Text == "") {
+			MessageBox::Show("Це останне питання в тесті, ви не додавали більше питань в цей тест", "Перегляд тесту завершено");
+			numq = 0;
+			this->textBoxA->ReadOnly = false;
+			this->textBoxQ->ReadOnly = false;
+		}
+		else {
+			numq = numq++;
+		}
+
 	}
 };
 }

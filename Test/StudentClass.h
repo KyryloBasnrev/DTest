@@ -130,7 +130,7 @@ class Student {
 		}
 
 		int Check(String^ a, String^ au) {
-			if (a = au) {
+			if (a == au) {
 				return 1;
 			}
 			else {

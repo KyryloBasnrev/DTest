@@ -43,3 +43,4 @@ Class Test.CreateTestForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     Int32 qnum : Public
+    Int32 numq : Public

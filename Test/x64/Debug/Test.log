@@ -7,5 +7,7 @@ D:\C++_Proj\Test\Test\RegisterClass.h(84): warning C4715: Register::LastId: зн
 D:\C++_Proj\Test\Test\StudentClass.h(92): warning C4715: Student::TestQ: значение возвращается не при всех путях выполнения
 D:\C++_Proj\Test\Test\StudentClass.h(130): warning C4715: Student::TestA: значение возвращается не при всех путях выполнения
 D:\C++_Proj\Test\Test\CreateTestClass.h(53): warning C4715: CreateTest::LastId: значение возвращается не при всех путях выполнения
+D:\C++_Proj\Test\Test\CreateTestClass.h(124): warning C4715: CreateTest::TestQ: значение возвращается не при всех путях выполнения
+D:\C++_Proj\Test\Test\CreateTestClass.h(162): warning C4715: CreateTest::TestA: значение возвращается не при всех путях выполнения
   Start.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   Test.vcxproj -> D:\C++_Proj\Test\x64\Debug\Test.exe
