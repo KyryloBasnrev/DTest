@@ -74,7 +74,7 @@ namespace Test {
 			this->Margin = System::Windows::Forms::Padding(5);
 			this->Name = L"TitherForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"TitherForm";
+			this->Text = L"Test";
 			this->ResumeLayout(false);
 
 		}

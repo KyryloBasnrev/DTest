@@ -195,7 +195,7 @@ namespace Test {
 			this->Margin = System::Windows::Forms::Padding(5);
 			this->Name = L"CreateTestForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"CreateTestForm";
+			this->Text = L"Test";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

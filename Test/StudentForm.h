@@ -200,57 +200,75 @@ namespace Test {
 			this->Margin = System::Windows::Forms::Padding(5);
 			this->Name = L"StudentForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"StudentForm";
+			this->Text = L"Test";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	public: int score = 0;
+	public: int number = 0;
 	private: System::Void buttonF_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		String^ name = this->textBoxName->Text;
 		String^ adres = this->textBoxAdres->Text;
-		int number = 1;
 
 		Student s;
 
-		String^ q = s.TestQ(adres, name, Convert::ToString(number));
+		String^ q = s.TestQ(adres, name, Convert::ToString(1));
 
 		this->textBoxQ->Text = q;
 
 		this->textBoxName->ReadOnly = true;
 		this->textBoxAdres->ReadOnly = true;
+		this->textBoxQ->ReadOnly = true;
 
 		this->textBoxA->ReadOnly = false;
-		this->textBoxQ->ReadOnly = false;
+
+		number = number++;
 
 	}
 	private: System::Void buttonN_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ name = this->textBoxName->Text;
+		String^ adres = this->textBoxAdres->Text;
+
+		Student s;
+
+		String^ q = s.TestQ(adres, name, Convert::ToString(number + 1));
+
+		this->textBoxQ->Text = q;
+
+		if (this->textBoxQ->Text == "") {
+			MessageBox::Show("Тест завершено, питань більше немає","Завершення");
+			MessageBox::Show(Convert::ToString(score), "Ваша оцінка");
+		}
+		else {
+			number = number++;
+		}
 
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		String^ name = this->textBoxName->Text;
 		String^ adres = this->textBoxAdres->Text;
-		int number = 0;
 
 		Student s;
 
-		String^ a = Convert::ToString(s.TestA(adres, name, Convert::ToString(number + 1)));
+		String^ a = Convert::ToString(s.TestA(adres, name, Convert::ToString(number)));
 
 		String^ au = this->textBoxA->Text;
 
-		MessageBox::Show(a);
-		MessageBox::Show(au);
+		int id = s.LastId();
+		s.SaveUserAnswer(Convert::ToString(id + 1), adres, name, Convert::ToString(number), au);
 
-		int r = s.Check(a, au);
+		au = s.UserA(adres, name, Convert::ToString(number));
 
-		if (r == 1) {
-			MessageBox::Show("+");
+		if (a == au) {
+			score = score++;
+			this->textBoxA->Text = "";
 		}
 		else {
-			MessageBox::Show("-");
+
 		}
 
 	}

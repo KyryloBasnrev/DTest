@@ -4,8 +4,10 @@ D:\C++_Proj\Test\Test\StartClass.h(90): warning C4715: Users::UserLog: знач�
 D:\C++_Proj\Test\Test\StartClass.h(126): warning C4715: Users::UserPas: значение возвращается не при всех путях выполнения
 D:\C++_Proj\Test\Test\StartClass.h(165): warning C4715: Users::Choise: значение возвращается не при всех путях выполнения
 D:\C++_Proj\Test\Test\RegisterClass.h(84): warning C4715: Register::LastId: значение возвращается не при всех путях выполнения
-D:\C++_Proj\Test\Test\StudentClass.h(92): warning C4715: Student::TestQ: значение возвращается не при всех путях выполнения
-D:\C++_Proj\Test\Test\StudentClass.h(130): warning C4715: Student::TestA: значение возвращается не при всех путях выполнения
+D:\C++_Proj\Test\Test\StudentClass.h(52): warning C4715: Student::LastId: значение возвращается не при всех путях выполнения
+D:\C++_Proj\Test\Test\StudentClass.h(128): warning C4715: Student::TestQ: значение возвращается не при всех путях выполнения
+D:\C++_Proj\Test\Test\StudentClass.h(166): warning C4715: Student::TestA: значение возвращается не при всех путях выполнения
+D:\C++_Proj\Test\Test\StudentClass.h(246): warning C4715: Student::UserA: значение возвращается не при всех путях выполнения
 D:\C++_Proj\Test\Test\CreateTestClass.h(53): warning C4715: CreateTest::LastId: значение возвращается не при всех путях выполнения
 D:\C++_Proj\Test\Test\CreateTestClass.h(124): warning C4715: CreateTest::TestQ: значение возвращается не при всех путях выполнения
 D:\C++_Proj\Test\Test\CreateTestClass.h(162): warning C4715: CreateTest::TestA: значение возвращается не при всех путях выполнения
